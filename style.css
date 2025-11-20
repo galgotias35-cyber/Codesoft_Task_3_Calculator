@@ -1,0 +1,125 @@
+/* style.css */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* History Styles */
+.history-container {
+    background-color: #222;
+    color: #c9d1d9;
+    border-radius: 10px;
+    width: 300px;
+    padding: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.history-container h2 {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+    border-bottom: 1px solid #444;
+    padding-bottom: 5px;
+}
+
+#history-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+    max-height: 150px;
+    overflow-y: auto; /* Scroll bar for history */
+}
+
+#history-list li {
+    padding: 5px 0;
+    border-bottom: 1px solid #444;
+    font-size: 0.9em;
+    display: flex;
+    justify-content: space-between;
+}
+
+.clear-history {
+    background-color: #d9534f; 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    height: 40px;
+    width: 100%;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+/* Calculator Styles */
+.calculator {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    background-color: #333;
+    padding: 10px;
+}
+
+.calculator-screen {
+    width: 100%;
+    height: 60px;
+    border: none;
+    background-color: #222;
+    color: white;
+    text-align: right;
+    padding: 10px;
+    font-size: 2em;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+.calculator-keys {
+    /* Use CSS Grid for the 4x5 layout */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+}
+
+button {
+    height: 50px;
+    background-color: #666;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #777;
+}
+
+/* Specific button styles */
+.operator {
+    background-color: #f7922d; /* Orange for operators */
+}
+
+.equal-sign {
+    /* Position the equals sign */
+    background-color: #4CAF50; /* Green for equals */
+    grid-column: 4; /* Place it in the 4th column */
+    grid-row: 4 / span 2; /* Span rows 4 and 5 */
+    height: 110px; /* Adjust height to fill the space */
+}
+
+.all-clear {
+    background-color: #d9534f; /* Red for AC */
+    grid-column: 1 / span 1; /* Position AC in the first column */
+}
